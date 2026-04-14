@@ -1,0 +1,226 @@
+body {
+    background-color: #FFD0A0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    color: #FFD0A0;
+    margin: 0;
+}
+
+
+.navbar {
+    background-color: #8C3200 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #FFD0A0 !important;
+    font-size: 14px;
+}
+
+.navbar .nav-link.active {
+    color: #fff !important;
+}
+
+.navbar .nav-link.disabled {
+    color: #B87040 !important;
+}
+
+.navbar .form-control {
+    background: #FFD0A0;
+    border: 1px solid #FFD0A0;
+    color: var#8C3200;
+    font-size: 13px;
+}
+
+.navbar .btn-outline-success {
+    border-color: #FFD0A0;
+    color: #FFD0A0;
+    font-size: 13px;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #FFD0A0;
+    color: #8C3200;
+}
+
+
+.titulo {
+    margin: 32px auto 0;
+    width: min(680px, 95%);
+    background-color: #F47820;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 20px 32px;
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #FFD0A0;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+.formulario {
+    margin: 0 auto 40px;
+    width: min(680px, 95%);
+    background-color: #fff;
+    border: 1px solid #FFD0A0;
+    border-top: none;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 28px 36px 32px;
+}
+
+
+.campo {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.campo h2, .iniciar-sesion{
+    font-size: 12px;
+    font-weight: 600;
+    color: #8C3200;
+    letter-spacing: 0.06em;
+    margin: 0 0 6px;
+}
+
+
+.campos-dobles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+input, select {
+    height: 42px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    appearance: auto;
+}
+
+
+
+option:checked {
+  background-color: #FFA552;
+  color: #8C3200;
+}
+
+input::placeholder {
+    color: #A89B8C;
+    font-size: 13px;
+}
+
+input:focus, select:focus {
+    border-color: #F47820;
+    box-shadow: 0 0 0 3px rgba(244, 120, 32, 0.15);
+}
+
+.link {
+    text-decoration: none;
+    color: #F47820;
+}
+
+.link:hover{
+    color: #D4560A;
+}
+
+.iniciar-sesion{
+    
+    padding-top: 15px;
+    margin: 0 23%;
+}
+/* From Uiverse.io by adamgiebl */ 
+.input-wrapper input, select {
+  background-color: #FFD0A0;
+  border: 1px solid #FFA552;
+  padding: 0 14px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 1rem;
+  color: #8C3200;
+  box-shadow: 0 0.4rem #FFA552;
+  cursor: text;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #F47820;
+    box-shadow: 0 0 0 3px rgba(255, 154, 82, 0.15);
+}
+
+
+.contenedor {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    --primary-color:   #D4560A;
+    --secondary-color: #fff;
+    --hover-color:     #8C3200;
+    --arrow-width:     10px;
+    --arrow-stroke:    2px;
+    border: 0;
+    border-radius: 10px;
+    color: var(--secondary-color);
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    transition: background 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow::before {
+    right: 0;
+}
+
+select{
+    color: #A89B8C;
+}
