@@ -9,18 +9,18 @@ VALUES
 -- USUARIOS
 INSERT INTO usuario (contraseña,email,estado,image_url)
 VALUES
-(sha2('admin123'),'admin@conjuntoresidencial1.com','Activo','admin123.jpg'),
-(sha2('admin234'),'admin@conjuntoresidencial2.com','Activo','admin234.jpg'),
-(sha2('prop101'),'carlos.ramirez@gmail.com','Activo','carlos.jpg'),
-(sha2('prop102'),'laura.sanchez@gmail.com','Activo','laura.jpg'),
-(sha2('prop103'),'andres.lopez@gmail.com','Inactivo','andres.jpg'),
-(sha2('prop104'),'paula.moreno@gmail.com','Activo','paula.jpg'),
-(sha2('prop105'),'daniel.torres@gmail.com','Activo','daniel.jpg'),
-(sha2('prop106'),'camila.ruiz@gmail.com','Inactivo','camila.jpg'),
-(sha2('prop107'),'sebastian.vargas@gmail.com','Activo','sebastian.jpg'),
-(sha2('prop108'),'valentina.castro@gmail.com','Activo','valentina.jpg'),
-(sha2('prop109'),'felipe.herrera@gmail.com','Activo','felipe.jpg'),
-(sha2('prop110'),'natalia.reyes@gmail.com','Inactivo','natalia.jpg');
+(sha2('admin123', 256),'admin@conjuntoresidencial1.com','Activo','admin123.jpg'),
+(sha2('admin234', 256),'admin@conjuntoresidencial2.com','Activo','admin234.jpg'),
+(sha2('prop101', 256),'carlos.ramirez@gmail.com','Activo','carlos.jpg'),
+(sha2('prop102', 256),'laura.sanchez@gmail.com','Activo','laura.jpg'),
+(sha2('prop103', 256),'andres.lopez@gmail.com','Inactivo','andres.jpg'),
+(sha2('prop104', 256),'paula.moreno@gmail.com','Activo','paula.jpg'),
+(sha2('prop105', 256),'daniel.torres@gmail.com','Activo','daniel.jpg'),
+(sha2('prop106', 256),'camila.ruiz@gmail.com','Inactivo','camila.jpg'),
+(sha2('prop107', 256),'sebastian.vargas@gmail.com','Activo','sebastian.jpg'),
+(sha2('prop108', 256),'valentina.castro@gmail.com','Activo','valentina.jpg'),
+(sha2('prop109', 256),'felipe.herrera@gmail.com','Activo','felipe.jpg'),
+(sha2('prop110', 256),'natalia.reyes@gmail.com','Inactivo','natalia.jpg');
 
 
 -- ROL USUARIO
