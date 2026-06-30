@@ -253,7 +253,7 @@ ON UPDATE CASCADE
  id_salon_comunal INT ,
  descripcion VARCHAR(500) NOT NULL,
  hora_inicio TIMESTAMP NOT NULL,
- hora_fin TIMESTAMP NOT NULL,
+ hora_fin DATE NOT NULL,
  valor_hora INT NOT NULL,
  estado VARCHAR(20) NOT NULL,
  
