@@ -283,4 +283,67 @@ ON UPDATE CASCADE
  REFERENCES silla(id)
  ON DELETE RESTRICT
  ON UPDATE CASCADE
+
+
+  --  CHECK'S
+ALTER TABLE usuario 
+ADD CONSTRAINT chk_usuario_estado CHECK (estado IN ('activo','inactivo'));
+
+
+ALTER TABLE tipo_documento 
+ADD CONSTRAINT chk_tipodoc_estado CHECK (estado IN ('activo','inactivo'));
+
+
+ALTER TABLE user_data 
+ADD CONSTRAINT chk_numero_documento CHECK (numero_documento > 0);
+
+
+ALTER TABLE administrador 
+ADD CONSTRAINT chk_admin_estado CHECK (estado IN ('activo','inactivo')),
+ADD CONSTRAINT chk_admin_fechas CHECK (fecha_fin IS NULL OR fecha_fin >= fecha_inicio);
+
+
+ALTER TABLE propietario 
+ADD CONSTRAINT chk_propietario_estado CHECK (estado IN ('activo','inactivo'));
+
+
+ALTER TABLE queja_sugerencia 
+ADD CONSTRAINT chk_pqr_estado CHECK (estado IN ('abierta','en_proceso','cerrada'));
+
+
+ALTER TABLE apartamento 
+ADD CONSTRAINT chk_apto_estado CHECK (estado IN ('ocupado','desocupado')),
+ADD CONSTRAINT chk_apto_numero CHECK (numero > 0);
+
+
+ALTER TABLE propietario_gestion_apartamento 
+ADD CONSTRAINT chk_gestion_estado CHECK (estado IN ('activo','inactivo'));
+
+
+ALTER TABLE tipo_multa 
+ADD CONSTRAINT chk_tipomulta_valor CHECK (valor > 0),
+ADD CONSTRAINT chk_tipomulta_estado CHECK (estado IN ('activo','inactivo'));
+
+
+ALTER TABLE multa 
+ADD CONSTRAINT chk_multa_numero CHECK (numero > 0),
+ADD CONSTRAINT chk_multa_estado CHECK (estado IN ('pendiente','pagada','anulada'));
+
+
+ALTER TABLE noticia 
+ADD CONSTRAINT chk_noticia_estado CHECK (estado IN ('publicada','borrador'));
+
+
+ALTER TABLE salon_comunal 
+ADD CONSTRAINT chk_salon_estado CHECK (estado IN ('disponible','ocupado','mantenimiento'));
+
+
+ALTER TABLE silla 
+ADD CONSTRAINT chk_silla_cantidad CHECK (cantidad > 0),
+ADD CONSTRAINT chk_silla_estado CHECK (estado IN ('disponible','en_uso','dañada'));
+
+
+ALTER TABLE alquiler 
+ADD CONSTRAINT chk_alquiler_valor CHECK (valor_hora > 0),
+ADD CONSTRAINT chk_alquiler_estado CHECK (estado IN ('reservado','confirmado','cancelado'));
  );
