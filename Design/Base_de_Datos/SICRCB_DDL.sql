@@ -247,21 +247,21 @@ ON UPDATE CASCADE
  estado VARCHAR(20) NOT NULL
  );
  
- CREATE TABLE alquiler(
+CREATE TABLE alquiler(
  id INT PRIMARY KEY AUTO_INCREMENT,
  id_propietario INT NOT NULL,
- id_salon_comunal INT ,
+ id_salon_comunal INT,
  descripcion VARCHAR(500) NOT NULL,
- hora_inicio TIMESTAMP NOT NULL,
- hora_fin DATE NOT NULL,
+ hora_inicio TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ hora_fin TIMESTAMP NOT NULL,
  valor_hora INT NOT NULL,
  estado VARCHAR(20) NOT NULL,
- 
+
  FOREIGN KEY (id_propietario)
  REFERENCES propietario(id)
  ON DELETE RESTRICT
  ON UPDATE CASCADE,
- 
+
  FOREIGN KEY (id_salon_comunal)
  REFERENCES salon_comunal(id)
  ON DELETE RESTRICT
